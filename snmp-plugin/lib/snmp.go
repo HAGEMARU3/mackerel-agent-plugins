@@ -31,7 +31,7 @@ type SNMPPlugin struct {
 func (m SNMPPlugin) FetchMetrics() (map[string]interface{}, error) {
 	stat := make(map[string]interface{})
 
-	s, err := gosnmp.NewGoSNMP(m.Host, m.Community, gosnmp.Version2c, 10)
+	s, err := gosnmp.NewGoSNMP(m.Host, m.Community, gosnmp.Version2c, 2)
 	if err != nil {
 		return nil, err
 	}
